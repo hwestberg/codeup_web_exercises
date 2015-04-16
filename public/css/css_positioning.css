@@ -1,0 +1,88 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.top-link { margin: 10px;
+	text-decoration: none;
+}
+
+.container-ribbon {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+}
+
+.box-style {
+	border: 1px solid;
+	border-color: black;
+	height: 72px;
+	width: 72px;
+	padding: 10px;
+	margin: 25px 25px 25px 25px;
+	color: white;
+	position: relative;
+}
+
+.container-first-row {
+	float:left;
+}
+
+.container-second-row {
+	clear:both;
+}
+
+.arrow {
+	position: relative;
+	right: -45px;
+	top: -80px;
+	-webkit-transition: border-color 2s, -web-kit-transform 2s; 
+	transition: border-color 2s, transform 2s; 
+}
+
+
+.arrow:hover { 
+	-webkit-transform:rotate(200deg);
+    transform:rotate(200deg);
+    }
+
+
+#red-box {
+	background-color: red;
+	float: left;
+	
+}
+
+#orange-box {
+	background-color: orange;
+	float: left;
+}
+
+#yellow-box {
+	background-color: yellow;
+	float: left;
+	
+}
+#green-box {
+	background-color: green;
+	float: left;
+
+	
+}
+#blue-box {
+	background-color: blue;
+	float: left;
+	
+}
+#violet-box {
+	background-color: violet;
+	float: left;
+}
+
+
+body {
+	margin:auto;
+}
+

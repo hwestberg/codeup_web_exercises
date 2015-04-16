@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+
+h1, h2 {
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+	font-weight: 400;
+	text-align: center;
+	padding: 20px;
+	border: 10px orange;
+	background-color: #91FFAD;
+	width: 300px;
+	margin: 5px 500px;
+}
+ 
+p {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	background-image: url(../img/symphony.png);
+	
+}
+
+.languages {	
+	list-style: circle;
+}
+
+.conversion-chart {
+	width: 15%;
+	height: 15%;
+}
+
+#quotes {
+	font-family:'Quicksand', sans-serif;
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+	text-align: center;
+
+}
+
+ul {
+	font-family:'Quicksand', sans-serif;
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+
+}
+
+ol {
+	font-family:'Quicksand', sans-serif;
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+}
+
+dl {
+	font-family:'Quicksand', sans-serif;
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+}
+.conversion-chart {
+	font-family:'Quicksand', sans-serif;
+	font-family:'Quicksand', sans-serif;
+	color: #174024;
+}
+
+#car-pic {
+ height: 300px;
+
+}
+
+

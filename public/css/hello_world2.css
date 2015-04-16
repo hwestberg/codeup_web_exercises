@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+	background-color: #3B7F60;
+	padding: 20px 20px 30px 30px;
+	height: 100px;
+	width: auto;
+	margin: 0;
+	color: white;
+}
+
+body {
+	margin: 0px;
+}
+
+
+.nav-container {
+	position: absolute;
+	right:10px;
+	top:10px;
+}
+.nav-container ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+.nav-container ul li {
+	display: inline;
+
+}
+
+.nav-container ul li a {
+		text-decoration: none;
+		padding: .2em 1em;
+		font-family: 'Quicksand', sans-serif;
+		color: white;	
+		font-size: 20px;	
+}
+
+.nav-container ul li a:hover {
+		color: black;
+}
+header .site-title {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 30px;
+	margin: 0px;
+	float:left;
+}
+
+#flower {
+	width: 40px;
+	padding-left: 10px;
+}
+
+body {
+	background-image:url(../img/symphony.png);
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+
+}
+
+blockquote.quote-container {
+	padding-top: 90px; }
+
+
+.box {
+	width: 200px;
+	height: 275px;
+	border: 20px;
+	margin: 5px;
+	padding: 5px;
+	border-color: black;
+	background-color: #3B7F60;
+	float:left;
+	text-align: center;
+}
+
+.box:hover {
+background-color:gray;}
+
+#top-content {
+	background-image:url(../img/symphony.png);
+	margin: 0px;
+	padding-left: 80px;
+	border: 0px;
+
+}
+.bottom-content {
+   clear: left;
+   padding: 100px;
+}
+
+ul {
+	list-style-type: none;
+	vertical-align: middle;
+	display: block;
+	float: left;
+}
+
+h1, h2 {
+	color: rgb(64,61,60);
+	margin: 5px;
+}
+
+.quote-container {
+	width: 200px;
+	height: 275px;
+	border: 20px;
+	margin: 5px;
+	padding: 5px;
+	border-color: black;
+	background-color: #3B7F60;
+	float:left;
+	text-align: center;
+}
+
+.quote-container:hover{
+	background-color: gray;
+}
+
+section.main-section{
+	display:block;
+	clear:both;
+}
+
+.form-container {
+	margin-left:50px;
+}
+
+.contact-container, .quotes-container, .about-container {
+	padding-top: 100px;
+	padding-left: 75px;
+}
+
+

@@ -1,0 +1,126 @@
+/**	
+* CONTENTS
+* GENERIC
+* Normalize.css...........
+* Box-sizing........
+* HEADER
+* Header.......a title box for the page
+* OBJECTS
+* Boxes.........individual boxes
+*
+
+**/
+
+/*----------------------*\
+	#GENERIC
+\*______________________*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*----------------------*\
+	#HEADER
+\*______________________*/
+
+.top-link {
+	width:300px;
+	border:1px;
+	border-color: black;
+	border-style: solid;
+	border-radius:10px;
+	padding:5px;
+	font-family: arial;
+	font-size: 16;
+	background-color:salmon;
+	margin-left: 600px;
+	text-align: center;
+	-webkit-transition: margin-left 2s; 
+	transition: margin-left 2s; 
+}
+
+.top-link:hover {
+	-webkit-transform:margin-left:500px;
+    margin-left: 500px;
+}
+
+/*----------------------*\
+	#OBJECTS
+\*______________________*/
+
+
+/*This section providing styling for all boxes, including animation when hovered
+*/
+
+.box-style {	
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+	width: 162px;
+	height: 50px;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 10px;
+	-webkit-transition: border-color 2s, -web-kit-transform 2s; 
+	transition: border-color 2s, transform 2s; 
+}
+
+.box-style:hover { 
+	border-color: white;
+	-webkit-transform:rotate(60deg);
+    transform:rotate(60deg);
+    background-image: url(/img/smiley_moustache.jpg); 
+    background-repeat: repeat;
+    background-size: 25px;
+}
+
+/*styling the text in each box
+*/
+
+.box-text {
+	color: white;
+	font-family: arial;
+	font-weight: bold;
+	text-align: center;
+}
+
+.box-text:hover {
+	color: black;
+}
+
+.container {
+	margin-left: 600px;
+}
+
+/*individual box styles, colors, etc.
+*/
+
+#red-box {
+	background-color: red;
+	margin-left: 30px;
+}
+
+#orange-box {
+	background-color: orange;
+	margin-left: 60px;
+}
+
+#yellow-box {
+	background-color: yellow;
+	margin-left: 90px;
+}
+#green-box {
+	background-color: green;
+	margin-left: 120px;
+}
+#blue-box {
+	background-color: blue;
+	margin-left: 150px;
+}
+#violet-box {
+	background-color: violet;
+	margin-left: 170px;
+
