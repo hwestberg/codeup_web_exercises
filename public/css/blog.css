@@ -1,6 +1,70 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Global styles and config.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ * HEADER
+ * Header and navs.......Header and top/side navs.
+ * BODY
+
+ ...
+
+**/
+
+/*-------------------*\
+GENERIC
+\*-------------------*/
+
 html {
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+ 
+/*overrides grids.css container width*/
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+/*-------------------*\
+HEADER
+\*-------------------*/
+
+#mountain-pic {
+	width: 100%;
+}
+/*-------------------*\
+NAV
+\*-------------------*/
+
+nav ul li, a{
+	list-style-type: none;
+	text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
