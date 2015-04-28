@@ -29,7 +29,8 @@ html {
 /*overrides grids.css container width*/
 
 .container {
-	margin: 0 auto;
+	margin: auto;
+	margin-bottom: 0px;
 	width: 100%;
 	max-width: 1200px;
 }
@@ -48,23 +49,42 @@ NAV
 nav ul li, a{
 	list-style-type: none;
 	text-decoration: none;
+	color: #F5F5F5;
 
 }
 
+.main-nav-container {
+	background-color: #009688;
+	margin: 0px;
+	margin-top: 0px;
+}
+
+/*-------------------*\
+MAIN
+\*-------------------*/
 
 
+h1 {
+	color: #009688;
+	border-left: 1px solid;
+	padding-left: 40px
+}
 
 
+article {
+	padding-right: 650px;
+}
 
+/*-------------------*\
+FOOTER
+\*-------------------*/
 
+footer {
+	background-color: #009688;
+}
 
-
-
-
-
-
-
-
-
+p {
+	color: #F5F5F5;
+}
 
 

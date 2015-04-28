@@ -2,12 +2,7 @@
 */
 .container {
 	margin: 0 auto;
-	width: 80%;
 	max-width: 1200px;
-}
-
-.row {
-	width: 100%;
 }
 
 .row:after {
@@ -18,9 +13,13 @@
 
 .column {
 	float: left;
-	padding:20px;
+	padding: 20px;
 }
 
+.column > .row {
+	margin-left: -10px;
+	margin-right: -10px;
+}
 .column.one-third {
 	width: 33.333%;
 }
@@ -48,7 +47,9 @@
 .column.three-eighths {
 	width:37.5%;
 }
-
+.column.five-eighths {
+	width:62.5%;
+}
 .offset-two-thirds {
 	width: 66.6666%;
 }
