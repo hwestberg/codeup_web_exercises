@@ -6,21 +6,37 @@
 <body>
 	<script>
 	"use strict";
-	(function () {
 
-var words = ["dog", "cat", "mom", "ant", "racecar", "hannah", "type", "dad", "tab"];
+var string = "racecar";
 
-	function palindrome(word) {
-		// for word (var i = 1,  ) == function (word.reverse)
+console.log(string);
 
-	console.log(words + " is a palindrome");
+var stringSplit = string.split('');
 
-	}
+console.log(stringSplit);
 
-sayHello(words);
+var stringReversed = stringSplit.reverse();
+
+console.log(stringReversed);
+
+var stringReversedCombined = stringReversed.join("");
+
+console.log (stringReversedCombined);
+
+if (string == stringReversedCombined) {
+	console.log (string + " is a palindrome.");
+} else {
+	console.log (string + " is not a palindrome.")
+}
 
 
-		})();
+
+// var words = ["dog", "cat", "mom", "ant", "racecar", "hannah", "type", "dad", "tab"];
+
+// for 
+
+
+	
 	</script>
 </body>
 </html>
