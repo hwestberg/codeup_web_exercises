@@ -6,13 +6,36 @@
 <body>
 	<script>
 	"use strict";
-	var number = Math.floor((Math.random()*50)+1)
+	var number = Math.floor((Math.random()*50)+1);
 
-	console.log("Random odd number to skip is: " + number)
-
-	console.log(Yikes)
+	if (number % 2 ==!0) {
+			console.log("Random odd number to skip is: " + number)
+		}
 	
-	// for (number, number % 2 != 0) {console.log(number)
+	for (var i = 1; i <= 50; i++) {
+		
+		if (i % 2 !==0) {
+			console.log("Here is an odd number: " + i);			
+		}
+
+		if (i == number){
+			console.log ("Yikes, skipping number: " + i);
+
+		}
+		
+	}
+
+
+	// console.log("Here is an odd number" + i)
+
+
+	// for (var i = 1; i <= 50;  i++) {
+
+		
+	// 	if (i=number)
+	// 		break;
+	// 	}  
+	// 	console.log(i)
 
 	// }
 
