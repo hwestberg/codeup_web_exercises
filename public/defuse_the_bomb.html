@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Defuse the BOM</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/defuse_the_bomb.css">
+    <link rel="stylesheet" type="text/css" href="css/grids.css">
+</head>
+<body>
+
+   <div class="row"> 
+        <img src="img/bomb_text.png">
+    </div>
+    <div class="row">
+        <h2 id="message"> <span id="timer">5</span>...</h2>
+    </div>
+    <div class="row">
+        <img src="img/mario_bomb.png" id="bomb">
+    </div>
+    <div class="row">
+        <button id="defuser">Defuse the BOM</button>
+    </div>
+
+    <script>
+
+    var detonationTimer = 5;  
+
+        // TODO: This function needs to be called once every second
+    var interval = 1000;
+    var bombTimer = setInterval(function updateTimer()
+        {
+            if (detonationTimer == 0) {
+               var bombPic = document.getElementById("bomb");
+                
+                bombPic.attributes["src"].value = "img/bam.png";
+                
+                // alert('EXTERMINATE!');
+                // document.body.innerHTML = '';
+            } else if (detonationTimer > 0) {
+                document.getElementById('timer').innerHTML = detonationTimer;
+            }
+
+            detonationTimer--;
+        }, interval);
+
+        // TODO: When this function runs, it needs to
+        // cancel the interval/timeout for updateTimer()
+    
+    function defuseTheBOM()
+        {
+            clearInterval(bombTimer);
+            clearInterval(intervalMarioRun);
+        }
+
+// Mario running across the screen
+    var marioMargin = 900;
+            var intervalMarioRun = setInterval(function () {
+            var marioRun = document.getElementById("bomb")
+            marioRun.style["margin-left"] = marioMargin-- + "px";
+        }, 10); 
+
+
+        // Don't modify anything below this line!
+        //
+        // This causes the defuseTheBOM() function to be called
+        // when the "defuser" button is clicked.
+        // We will learn about events in the DOM lessons
+        var defuser = document.getElementById('defuser');
+        defuser.addEventListener('click', defuseTheBOM, false);
+    </script>
+</body>
+</html>
