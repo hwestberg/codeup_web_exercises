@@ -36,15 +36,17 @@
 		</div>
 		
 		<div class="row">
-			<button class="operator">C</button>
+			<button id="clear">C</button>
 			<button class="number">0</button>
-			<button class="operator">=</button>
+			<button id="equals">=</button>
 			<button class="operator">/</button>
 		</div>
 	</div>	
 <script type="text/javascript">
 "use strict"	
+
 	// code for handling input1 and input3
+	
 	var buttonNumberValue = document.getElementsByClassName("number");
 
 	var input1 = document.getElementById("input1");
@@ -55,7 +57,12 @@
 
 	var buttonOperatorValue = document.getElementsByClassName("operator");
 
+	var equals = document.getElementById("equals");
+
 	var operatorIsClicked = false;
+
+	var clear = document.getElementById("clear");
+
 
 	console.log(operatorIsClicked);
 
@@ -85,13 +92,29 @@
 		buttonNumberValue[i].addEventListener("click", inputNumberListener, false);
 	}
 
+	// code for handling clear, clears all inputs
 
 
+	var clearListener = function(event) {
+		input1.value = null;
+		input2.value = null; 
+		input3.value = null;
+		operatorIsClicked = false;
+	}
+
+	clear.addEventListener("click", clearListener, false);
+
+
+	var equalsListener = function(event) {
+		console.log(input1.value + input2.value + input3.value);
 	
+		input1.value = eval(input1.value + input2.value + input3.value);
+		input2.value = null;
+		input3.value = null;
 
+	}
 
-
-
+	equals.addEventListener("click", equalsListener, false);
 
 
 
