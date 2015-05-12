@@ -1,0 +1,84 @@
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ *
+ * GENERIC
+ *
+ * BODY
+
+ ...
+
+**/
+
+/*-------------------*\
+CALCULATOR
+\*-------------------*/
+
+html {
+	background-color: #E0E0E0;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row {
+	width: 300px;
+}
+
+
+.calculator-container {
+	width: 300px;
+	height: 375px ;
+	margin: 20%;
+	border-style: none;
+	background-color: #651FFF;
+	border-radius: 8px;
+	opacity: 20%;
+	box-shadow: 3px 3px 3px #4527A0;
+
+}
+
+#input1, #input3 {
+	width: 97px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 4px;
+}
+
+#input2 {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+button {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 8px;
+	background-color: #311B92;
+	border-style: none;
+	font: arial;
+	font-size: 20px;
+	color: white;
+	box-shadow: 3px 3px 3px #4527A0;
+}
+
+button:hover {
+	background-color: #1A237E;
+}
+
+#clear {
+	background-color: #C62828;
+}
+
+#clear:hover {
+	background-color: #DD2C00;
+}
