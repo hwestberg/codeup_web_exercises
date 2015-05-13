@@ -1,0 +1,115 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
+		<title>Map Exercise</title>
+	</head>
+		
+		<style type="text/css">
+	/*		CSS for all maps	*/		
+			html {
+				background-image: url(/img/washi.png);
+			}
+
+			#map-canvas  {
+				width: 90%;
+				height: 90%;
+				margin: 5%;
+			}
+
+			h1 {
+				font-family: 'Short Stack', cursive;
+				color: #F44336;
+				margin-right: 50%;
+				position: center;
+
+			}
+		</style>	
+	
+	<body>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvgSNyaSbU7k36e1zQiTb-3EAmEY_Qwgg"></script>	
+		<header>
+			
+			<h1>Delicious Restaurants in San Antonio</h1>
+		
+		</header>
+		
+		<div id="map-canvas"></div>
+		
+		<script type="text/javascript">
+
+		var restaurants = [{
+			"name": "Nikis Tokyo Inn",
+			"address" : "819 W Hildebrand Ave, San Antonio, TX 78212"
+			},
+			{
+			"name": "TriBeca",
+			"address": "4332 McCullough Ave, Olmos Park, TX, 78212"
+			},
+
+			{
+			"name": "Main Street Pizza",
+			"address": "1906 Main St, San Antonio, TX 78212"
+			},
+			{
+			"name": "Green Vegetarian Cuisine",
+			"address": "200 E Grayson St, San Antonio, TX 78215"
+			},
+			{
+			"name": "Kimura", 
+			"address" : "152 E Pecan St, San Antonio, TX 78205"
+			}
+		];
+
+		var geocoder = new google.maps.Geocoder();
+
+		for (i = 0; i < restaurants.length; i++) {
+
+				geocoder.geocode( {'address': restaurants[i].address}, function(results, status) {
+				
+				// check for successful rendering
+
+				if (status == google.maps.GeocoderStatus.OK) {
+					var mapOptions = {
+						zoom: 18,
+						center: results[0].geometry.location,
+						
+					}
+				
+				// prints the map
+
+				var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+				// alerts if unsuccessful
+
+				} else {
+					
+					alert("Geocoding was not successul - STATUS" + status);
+
+				}
+			});
+		}
+			
+		
+			var marker	= new google.maps.Marker ({
+				
+			position: results[0].geometry.location,
+				map: map,
+				icon: "img/sushi.png",
+				scaledSize: new google.maps.Size(10, 10),
+				zIndex: 1,
+				animation: google.maps.Animation.Drop,
+			});
+
+			var infowindow = new google.maps.InfoWindow({
+				content: "Niki's Tokyo Inn: Yummy sushi and fun waitstaff!"
+			});
+
+			infowindow.open(map, marker);
+
+			});
+
+		</script>
+	</body>
+	</html>
