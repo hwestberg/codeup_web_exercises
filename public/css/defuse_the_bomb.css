@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    border-style: solid, 1px, black;
+
+}
+
+.row {
+	margin-left: 40px;
+}
+
+#bomb {
+	margin-left: 900px;
+}
+
+h2 {
+	color: white;
+	font-size: 90px;
+}
+
+#defuser {
+	display: block;
+	border: 2px solid white;
+	background-color: black;
+	color: white;
+	text-decoration: bold;
+	outline: black;
+	padding: 4px;
+	font-size: 30px;
+	border-radius: 8px;
+}
+
+body {
+	 background-image: url("/img/mario_background.jpg");
+	 background-size: contain;
+}
+
+ 
