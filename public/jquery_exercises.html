@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-		<title></title>
-		<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+		<title>jQuery Practice</title>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+	<style type="text/css">
+	li {
+		list-style-type: none;
+		color: red;
+		font-weight: bold;
+	}
+
+	</style>
 	</head>
+
 	<body>
 		
+		<div id="page-container">
+			<h1 id="title">This is a page about what I want to do this summer!</h1>
+			<p>This summer I'd really like to go on a backpacking trip in the mountains.</p>
+			<h2>Things I Should Bring</h2>
+			<ul>
+				<li class="perishable codeup">Water</li>
+				<li class="perishable">Food</li>
+				<li class="non-perishable codeup">Tent</li>
+				<li class="non-perishable">Raincoat</li>
+				<li class="non-perishable">Headlight</li>
+				<li class="non-perishable codeup">Sunscreen</li>
+			</ul>
+		</div>
+
 		<script type="text/javascript">
-			$(document).ready(function() {
-   			 alert( 'The DOM has finished loading!' );
-				});
+			$('document').ready(function() {
+		    var contents = $('#title');
+		    $(".codeup").css("border", "1px solid red");
+		    $(".non-perishable").css ({
+		    	"color": "blue",
+		    	"font-weight": "italics",
+		    	});
+		    
+		    $("li").css("font-size", "20px");
+		    $("li, h1, p").css("color", "pink");
+		    var content = $("h1").html();
+		    	alert(content);   
+		    
+
+
+			});
+
 
 		</script>
 	</body>
