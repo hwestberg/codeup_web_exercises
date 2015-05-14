@@ -30,22 +30,20 @@
 		</div>
 
 		<script type="text/javascript">
-			$('document').ready(function() {
-		    var contents = $('#title');
-		    $(".codeup").css("border", "1px solid red");
-		    $(".non-perishable").css ({
-		    	"color": "blue",
-		    	"font-weight": "italics",
-		    	});
-		    
-		    $("li").css("font-size", "20px");
-		    $("li, h1, p").css("color", "pink");
-		    var content = $("h1").html();
-		    	alert(content);   
-		    
-
-
-			});
+		$('document').ready(function() {
+		   $("h1").click(function() {
+		   	$(this).css("background-color", "blue");
+		   });
+		   $("p").dblclick(function(){
+		   	$(this).css("font-size", "18px");
+		   })
+		   $("li").hover(function(){
+		   	$(this).css("color", "red");
+		   },
+		   function(){
+		   	$(this).css("color", "white");
+		   })
+		});
 
 
 		</script>
