@@ -2,26 +2,64 @@
 <html>
 <head>
 	<title>National Parks Quiz</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
 	<style type="text/css" src="/css/border_box.css"></style>
 	<style type="text/css" src="/css/grids.css"></style>
 	<style type="text/css">
-	#quizContainer {
+	
+	
+	body {
+		background-image: url(/img/teton-park.jpg);
+		background-size: 100%
+	}
+
+	#quizContainer, #facts-container {
 		margin-left: 25%;
+		background-color: rgba(0, 0, 0, .7);
+		width: 50%;
+		padding: 10px;
+		border-radius: 10px;
+		margin-top: 10px;
+	}
+
+	.question-container {
+		padding: 5px;
+		margin: 10px;
 	}
 
 	h1{
 		margin-left: 25%;
+		color: white;
+		font-family: 'Lato', sans-serif;
 	}
+	
+	dd, li, h3 {
+		color: white;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+	}
+
+	dt {
+		color: white;
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+	}
+
 	.invisible {
 		display: none;
 	}
 
 	button {
 		color: white;
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0);
 		height: 30px;
 		width: 60px;
 		border-radius: 6px;
+		font-family: 'Lato', sans-serif;
+	}
+
+	button:hover{
+		background-color: rgba(0, 0, 0, .5) ;
 	}
 
 	.row {
@@ -34,71 +72,107 @@
 	<h1>National Parks Fun Facts</h1>
 	<div id="quizContainer">
 		<dl>
-			<div>
+			<div class="question-container">
 				<dt class="row">What was the first national park?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">The first National Park was Yellowstone. It was created in 1872 through a law signed by president Ulysses S. Grant.</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park contains the highest point in North America?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">Denali National Park in Alaska contains Mt. McKinley, which is the highest point in North America, ranking in at 20,320 feet.</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park contains the deepest lake in the United States?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">Crater Lake, in Crater Lake National Park, OR, is the deepest lake, in the U.S. and the seventh deepest lake in the world. It is 1,932 feet deep and took 250 years of rain and snow accumulation to reach its current level.</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park is the largest in the U.S.?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">Wrangell-St. Elias National Park and Preserve in Alaska, which is more than 8.3 million acres, is the largest national park in the U.S. At six times the size of Yellowstone, it is the meeting point of four major mountain ranges and includes nine of the 16 highest peaks in the U.S. The preserve contains three climate zones, which means that it has everything from giant glaciers to wetlands to one of the largest active volcanoes in North America </dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">How many national parks are in the U.S.?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">There are 58 national parks in the National Park Service</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park is the smallest in the U.S.?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">The smallest national park is Hot Springs National Park in Arkansas coming in at about 5,500 acres.</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">How many acres of the U.S. are set aside in national parks?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">The National Parks Service sets aside 51 million acres of land to national parks, which is roughly the size of Kansas</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Only one state in the U.S. does not have a national park or a national monument. Which state is it?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">Delaware. Poor, poor Delaware</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park is home to the largest gypsum dune fields in the world?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">White Sands National Monument spans more than 275 sq. mi. of New Mexico desert and contains the largest gypsum dune fields in the world. But because the park lies adjacent to the country's largest military installation — a 3,200-sq.-mi. missile range — the crystalline waves are often closed to the public while the Defense Department conducts top-secret (and presumably highly dangerous) tests.</dd>
 			</div>
-			<div>
+			<div class="question-container">
 				<dt class="row">Which national park is the most remote in the U.S.?</dt> 
 				<button class="hideAnswer row">Answer</button>
 				<dd class="row invisible">Located 70 miles from Key West in the Gulf of Mexico, Dry Tortugas National Park is a collection of seven tiny islands that can be reached only by boat or plane, making it the country's most remote national park. Besides a stunning amount of marine life (it's home to the third largest barrier-reef system, outside of only Australia and Belize), the park boasts an impressive military and nautical history. The 163-year-old stronghold of Fort Jefferson was once used to house prisoners during the Civil War, and a 17th century Spanish galleon was uncovered by divers in 1989.</dd>
 			</div>
 		</dl>
 	</div>
+	<div id="facts-container">
+		<h3>Grand Teton National Park</h3>
+			<button class="hideFact row">Facts</button>
+			<ul>
+				<li>Total size: 310,000 acres (485 square miles)</li>
+				<li>17 species of carnivores (including grizzly bears and wolves)</li>
+				<li>Number of moraine lakes: 7(Include Jackson Lake, Leigh Lake, String Lake, Jenny Lake, Bradley Lake, Taggart Lake, Phelps Lake). Number of alpine lakes: 100+</li>
+			</ul>
+		
+		<h3>Big Bend National Park</h3>
+		<button class="hideFact row">Facts</button>
+			<ul>
+				<li>1 species of snakes, 22 species of lizards, and 7 species of turtles have been found in Big Bend. Snakes include red racers, bullsnakes, patchnoses, and garter snakes, both black-necked and checkered. Collared and leopard lizards are the largest of these animals, some a foot long. Turtles are found mainly along the Rio Grande, and include Big Bend sliders, spiny softshells, and the yellow mud turtles.</li>
+				<li>In 1933, The Texas Legislature recognizes the value of preserving the region and creates Texas Canyons State Park. Later the same year, it is renamed Big Bend State Park.</li>
+				<li>Lowest Elevation:1,715 feet at the Rio Grande River</li>
+			</ul>
+
+		<h3>Badlands National Park</h3>
+		<button class="hideFact row">Facts</button>
+			<ul>
+				<li>The park contains numerous examples of native wildlife, notably the American bison, which grazes on the plains, and smaller animals, such as the badger and black-tailed prairie dog.</li>
+				<li>In 1890, Badlands National Park witnessed one of the last "ghost dances" at Stronghold Table. The Lakota Indians believed that the dance rendered them impervious to bullets and that it would push the encroaching white men out of their territory. The area retains deep significance to the Lakota Indians and the Oglala Lakota tribe administers the Stronghold Table site with the National Park Service.</li>
+				<li>Badlands National Park contains numerous fossils of extinct creatures, largely from the Oligocene era of about 30 million years ago. The period was dominated by mammals such as prehistoric camels and rhinoceroses, specimens of which have been uncovered in the park;</li>
+			</ul>
+
+	</div>
 	
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript">
 "use strict"
 
-$("document").ready(function(){
+$(document).ready(function(){
 
-$(".hideAnswer").click(function(event){
-	event.preventDefault();
-	$(this).next().toggleClass("invisible");
-});
+	$(".hideAnswer").click(function(event){
+		event.preventDefault();
+		$(this).next().fadeToggle(600);
+	});
+
+	$("ul").each(function(index){
+
+		$(this).children().first().css("font-weight", "bold");
+	});
 
 
+	$(".hideFact").click(function(event){
+		event.preventDefault();
+		$(this).next().fadeToggle(600);
+
+	});
 
 });
 
