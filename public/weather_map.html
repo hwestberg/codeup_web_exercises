@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/border_box.css">
+	<link rel="stylesheet" type="text/css" href="/css/grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/weather_map.css">
+</head>
+<body>
+	
+	<main id="container">
+		<div class="row">
+			<h1 id="weatherTitle">What the heck is the weather in?</h1>
+		</div>
+		<div class="row" id="city">
+				<input method="GET" type="text" placeholder="City" id="enteredCity">
+		</div>
+		<div class="row" id="weather-container">
+			<div class="column" class="one-third" class="weather-box" id="day-one"></div>
+			<div class="column" class="one-third" class="weather-box" id="day-two"></div>
+			<div class="column" class="one-third" class="weather-box"id="day-three"></div>
+		</div>
+		<div class="row" id="map">
+		</div>
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/weather_map.js"></script>
+</body>
+</html>

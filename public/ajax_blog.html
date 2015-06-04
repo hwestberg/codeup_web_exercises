@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Trip to Ireland</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/border_box.css">
+	<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		h1, h2 {
+			font-family: 'Megrim', cursive;
+			color: #AED581;
+		}
+
+		div {
+			border-style: solid black;
+		}
+
+		h1 {
+			font-size: 50px;
+		}
+		
+		body {
+			margin-left: 10%;
+			background-color: #2E7D32;
+		}
+
+		p {
+			font-family: 'Open Sans', sans-serif;
+			color: #DCEDC8;
+		}
+
+		#blogContainer {
+			width: 70%;
+			
+		}
+
+		#weatherMapContainer {
+			width: 200px;
+			height: 200px;
+			position: fixed;
+			top: 20px;
+			right: 40px;
+			list-style-type: none;
+			background: #AED581;
+			padding: 5px;
+			border-radius: 3px;
+			color: #2E7D32;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<main id="blogContainer">
+		<h1>My Trip to Ireland</h1>
+		<div id="posts"></div>
+	</main>
+	<aside id="weatherMapContainer">	
+		<div id="weatherMap">
+		</div>
+	</aside>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+"use strict";
+var weather = function(){
+	$.get("http://api.openweathermap.org/data/2.5/weather", {
+			APPID: "d7a25b9a69ca99f96c3556439a04a1a8",
+			q: "Dublin, Ireland",
+			units: "imperial"
+		}).done(function(data){
+					console.log(data);
+					$("#weatherMap").html(
+						"<h3>" + data.name + " Weather" + "</h3>" +
+						"<img src =" + "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png>" + 
+						"<li>" + data.weather[0].main + "</li>" +
+						"<li>" + data.main.temp + "&deg F" + "</li>" +
+						"<li>"  + data.clouds.all  + "% Cloudy" + "</li>"
+						);
+				});
+}();
+
+var blog = function(){
+	$.get("data/blog.json").done(function(data){
+			console.log("data loaded");
+			var blogContents = "";
+			$(data).each(function(index, content){
+				console.log(data.title);
+				blogContents += "<h2>" + content.title + "</h2>";
+				blogContents += "<p>" + content.posts + "<p>";
+				blogContents += "<p>Tags: " + content.categories.join(", ") + " </p>";
+				blogContents += "<p>" + content.date + "</p>";
+			});
+			$("#posts").html(blogContents);	
+	});
+}();
+</script>
+</body>
+</html>

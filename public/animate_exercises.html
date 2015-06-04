@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:700,400,300' rel='stylesheet' type='text/css'>
+    <title>Animate</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0;
+            font-family: 'Advent Pro', sans-serif;
+        }
+
+        button {
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow: none;
+            background-color: #FF5722;
+            border-style: none;
+            color: white;
+            font-size: 20px;
+            margin: 5px;
+            font-family: 'Advent Pro', sans-serif;
+        }
+
+        #buttons-container {
+            margin-left: 20%;
+            
+        }
+
+        #text-container {
+            margin-left: 33.333333%;
+            margin-top: 100px;
+            width: 400px;
+            text-align: center;
+        }
+
+        #btn-animate {
+            margin: 15px;
+        }
+
+        .box {
+            margin: 15px;
+            position: relative;
+            width: 250px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <h1>Leon the Chameleon</h1>
+
+        <div> 
+            <p>Leon is a magical chameleon. Like most chameleons, Leon can change color to blend in with his surroundings. Unlike most chameleons, he can also change size. Use the commands below to help Leon show off his many talents!</p>
+    </div>
+
+    </div>
+    <div id="buttons-container">
+        <p>
+            <button id="btn-move-left">Move Left</button>
+
+            <button id="btn-move-right">Move Right</button>
+
+            <button id="btn-scale-up">Grow</button>
+
+            <button id="btn-scale-down">Shrink</button>
+
+            <button id="btn-disappear">Disappear</button>
+
+            <button id="btn-show">Reappear</button>
+
+            <button id="btn-all">Animate all</button>
+        </p>
+    </div>
+
+    <div><img id="animate-box" class="box" src="img/chameleon.png"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+        $("document").ready(function(){
+
+            'use strict';
+
+            // todo: Move the box by 100 pixels from the left
+
+            $("#btn-move-left").click(function(event) {
+                event.preventDefault();
+                $("#animate-box").animate({
+                    left: "-=50"
+                });
+            });
+
+            $("#btn-move-right").click(function(event) {
+                event.preventDefault();
+                $("#animate-box").animate({
+                    left: "+=50"
+                });
+            });
+
+            // todo: Scale the width up by 50%
+            
+            $("#btn-scale-up").click(function(event) {
+                event.preventDefault();
+                $("#animate-box").animate({
+                     width: "+=5%"
+                });
+            });
+
+
+            $("#btn-scale-down").click(function(event) {
+                    event.preventDefault();
+                    $("#animate-box").animate({
+                        width: "-=5%"
+                });
+            });
+            // todo: Use opacity to make the box invisible
+            
+            $("#btn-disappear").click(function(event) {
+                event.preventDefault();
+                $("#animate-box").animate({
+                    opacity: ".20"
+                });
+
+            });
+
+            // todo: Make the box appear again with opacity
+            $("#btn-show").click(function(event){
+                event.preventDefault();
+                $("#animate-box").animate({
+                    opacity: "100"
+                });
+            });
+
+            // todo: Once all is done see if you can chain all the animations
+            // to happen with the `Animate all` button.
+            // Refresh to start over before hitting the button.
+
+
+            $("#btn-all").click(function(event) {
+                event.preventDefault();
+                $("#animate-box").animate({
+                    left: "+=100",
+                    width: "+=50%",
+                    opacity: "0",
+                })
+
+            });
+        });
+
+           
+
+            
+
+
+           
+            
+
+    
+    
+    </script>
+</body>
+</html>

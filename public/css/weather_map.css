@@ -1,0 +1,32 @@
+div {
+	border-style: solid;
+}
+
+
+html {
+	background-color: #4DB6AC;
+}
+#container {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.row {
+	width: 50%;
+	margin: auto;
+	border-radius: 5px;
+}
+
+.column {
+	margin: auto;
+	width: 33.333%;
+}
+
+.one-third {
+	background-color: #FFEB3B;
+	border-radius: 20px;
+
+}
