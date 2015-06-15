@@ -1,0 +1,60 @@
+.html {
+	font-size: 50px;
+}
+
+.box {
+	width: 40%;
+	height: 2%;
+	padding: 2%;
+	float: left;
+	font: tahoma;
+	font-color: white;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.box:hover{
+	width: 45%;
+}
+.red {
+	background-color: red;
+}
+.orange	{
+	background-color: orange;
+}
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: green;
+}
+
+.blue {
+	background-color: blue;
+}
+
+/*breakpoints for responsive design*/
+/*screen sizes under 550px*/
+@media screen and (max-width: 550px) {
+	.box{
+		width: 80%;
+		margin: 3%;
+	}
+}
+
+/*screen sizes 550px and up*/
+@media screen and (min-width: 550px) and (max-width: 800px) {
+.box {
+	width: 30%;
+	margin: 5%;
+}
+}
+
+/*screen sizes 800px and up*/
+@media screen and (min-width: 800px) {
+	.box {
+		width: 25%;
+		margin: 3%;
+	}
+}
