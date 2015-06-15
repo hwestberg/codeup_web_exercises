@@ -66,16 +66,18 @@
 
 		for (i = 0; i < restaurants.length; i++) {
 
-				geocoder.geocode( {'address': restaurants[i].address}, function(results, status) {
+
+				geocoder.geocode( {"address": restaurants[i].address}, function(results, status) {
 				
 				// check for successful rendering
 
 				if (status == google.maps.GeocoderStatus.OK) {
+					
 					var mapOptions = {
+						
 						zoom: 18,
 						center: results[0].geometry.location,
-						
-					}
+				} 
 				
 				// prints the map
 
@@ -86,29 +88,28 @@
 				} else {
 					
 					alert("Geocoding was not successul - STATUS" + status);
-
 				}
 			});
 		}
-			
+	
 		
-			var marker	= new google.maps.Marker ({
+			// var marker	= new google.maps.Marker ({
 				
-			position: results[0].geometry.location,
-				map: map,
-				icon: "img/sushi.png",
-				scaledSize: new google.maps.Size(10, 10),
-				zIndex: 1,
-				animation: google.maps.Animation.Drop,
-			});
+			// 	position: results[0].geometry.location,
+			// 	map: map,
+			// 	icon: "img/sushi.png",
+			// 	scaledSize: new google.maps.Size(10, 10),
+			// 	zIndex: 1,
+			// 	animation: google.maps.Animation.Drop,
+			// });
 
-			var infowindow = new google.maps.InfoWindow({
-				content: "Niki's Tokyo Inn: Yummy sushi and fun waitstaff!"
-			});
+			// var infowindow = new google.maps.InfoWindow({
+			// 	content: "Niki's Tokyo Inn: Yummy sushi and fun waitstaff!"
+			// });
 
-			infowindow.open(map, marker);
+			// infowindow.open(map, marker);
 
-			});
+			// });
 
 		</script>
 	</body>
