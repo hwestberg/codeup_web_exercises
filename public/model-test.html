@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html ng-app="modelTest">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MadLib</title>
+	<link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/grids.css">
+	<link rel="stylesheet" type="text/css" href="/css/border_box.css">
+	<style type="text/css">
+	
+/*text*/	
+html {
+		background-color: #ECEFF1 /*#B2EBF2 /*#1DE9B6*/ /*#424242*/*/;
+		font-family: 'Sue Ellen Francisco', cursive;
+		color: #263238;
+		font-size: 25px;
+	}
+
+::-webkit-input-placeholder {
+   color: #263238;
+	}
+
+/*form styling*/	
+form {
+		width: 75%;
+		margin: auto;
+		padding: 20px;
+	}
+
+input, select 	{
+		background-color: #B2EBF2; 
+		margin-top: 5%;
+		border-radius: 5px;
+		padding: 4px;
+		display: block;
+		width: 100%;
+		outline-style: none;
+		border: 3px solid #263238;
+	}
+
+/*form validation*/
+ng-pristine {
+
+}
+
+ng-dirty {
+
+}
+
+/*story styling*/	
+.story-title-container, .instructions-container  {
+		color: #263238;
+		width: 50%;
+		text-align: center;
+		margin:0 auto;
+		padding: auto;
+	}
+
+.story-container {
+		font-size: 1.25rem;
+		background-color: #B2EBF2;
+		width: 75%;
+		height: 28%;
+		margin: auto;
+		border: 5px solid #263238;
+		border-radius: 7px;
+		padding: 20px;
+	}
+
+/*responsive settings*/	
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width:768px) { 
+
+
+
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width:992px) { 
+
+
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) { 
+
+
+ }
+</style>
+</head>
+<body ng-controller= "StoryController as story">	
+	<div class="instructions-container row">
+		<h2>
+		Fill out the form below to create your story!
+		</h2>
+	</div>
+	<form class="container" novalidate>
+		<div class="row">
+			<div class="column one-third">
+				<input id="name" type="text" placeholder="Your Name" ng-model="user.name" required>
+
+				<input id="email" type="email" placeholder="Your Email" ng-model="user.email" required> 
+
+				<input id="date" type="date" placeholder="Your D.O.B" ng-model="user.date" min="1930-01-01" required>
+				
+				<select id="animal" type="text" placeholder="Animal" ng-model="story.animal" ng-change="story.getAnimalPic()"required>
+					<option value="" disabled selected>Select an Animal</option>
+					<option ng-repeat="(key, value) in story.animals">{{key}}</option>
+				</select>
+
+				<input id="food1" type="text" placeholder="Singular Item of Food" ng-model="story.food1" required> 
+
+				<input id="food2" type="text" placeholder="Plural Item of Food" ng-model="story.food2" required> 
+
+				<input id="adjective1" type="text" placeholder="Adjective" ng-model="story.adjective1" required>
+
+				<input id="game1" type="text" placeholder="Game" ng-model="story.game1" required>
+
+			</div>
+			
+			<div class="column one-third">
+					<input id="noun1" type="text" placeholder="Noun" ng-model="story.noun1" required>
+
+					<input id="noun2" type="text" placeholder="Noun" ng-model="story.noun2" required>
+
+					<input id="noun3" type="text" placeholder="Noun" ng-model="story.noun3" required>
+
+					<input id="noun4" type="text" placeholder="Noun" ng-model="story.noun4" required>
+
+					<input id="noun5" type="text" placeholder="Noun" ng-model="story.noun5" required>
+
+					<input id="pluralNoun1" type="text" placeholder="Plural Noun" ng-model="story.pluralNoun1" required>
+
+					<input id="place1" type="text" placeholder="Place" ng-model="story.place1" required>
+
+					<input id="place2" type="text" placeholder="Place" ng-model="story.place2" required>
+			</div>
+			<div class="column one-third">
+					<input id="verb1" type="text" placeholder="Verb" ng-model="story.verb1" required>
+
+					<input id="verb2" type="text" placeholder="Verb" ng-model="story.verb2" required>
+
+					<input id="verb3" type="text" placeholder="Verb" ng-model="story.verb3" required>
+
+					<input id="verb4" type="text" placeholder="Verb" ng-model="story.verb4" required>
+
+					<input id="verb5" type="text" placeholder="Verb" ng-model="story.verb5" required>
+
+					<input id="verb6" type="text" placeholder="Verb" ng-model="story.verb6" required>
+
+					<input id="verb7" type="text" placeholder="Verb" ng-model="story.verb7" required>
+
+					<input id="verbIng1" type="text" placeholder="Verb ending in 'ing'" ng-model="story.verbIng1" required>
+					 
+			</div>	
+	</div>
+</form>
+<div class="story-title-container row">
+	<h1>If You Give a {{story.animal | capitalize}} a {{story.food1 | capitalize}}</h1>
+	<h2>Written By: {{user.name | capitalize}}, a human who was birthed on {{user.date | date: format: longDate}}</h2>
+
+</div>
+
+<div  class="story-container">
+		<div class="row">
+		<div class="illustrations column one-fourth">
+		
+				<img class="animal-pic" id="animal-pic" src={{story.animalPic}}>
+
+		</div>
+		<div class="story column three-fourths">
+			<p>
+				If you give a {{story.animal | lowercase}} a {{story.food1 | lowercase}}, it will ask for a {{story.noun1 | lowercase}}. When you give it the {{story.noun1 | lowercase}}, it will want to {{story.verb1 |lowercase}}. When it's finished, it will {{story.verb2 | lowercase}}. Then it will {{story.verb3 | lowercase}} and {{story.verb4 | lowercase}}. Since that doesn't work out, it will want to go to {{story.place1}}. On the way, it will see a {{story.noun2}} and will want a {{story.noun3}}. Then you will have to take it to the  {{story.place2}}. It will be {{story.adjective1}}. Then it will ask you for some {{story.food2}}. On the way home it will start a game of {{story.game1}}. When you finally get home, you'll have to {{story.verb5}}. Then it will want a {{story.noun4}} and {{story.pluralNoun1}}. You'll have to find a {{story.noun4}} and {{story.pluralNoun1}}. When it sees the {{story.noun4}} and {{story.pluralNoun1}}, it will start {{story.verbIng1}}. 
+			</p>
+			<p>
+				Then  it will run out of {{story.pluralNoun1}} and will {{story.verb6}}. Of course, when it is finished, it will want to {{story.verb7}}. So it will ask for a  {{story.noun5}}. And, chances are, if you give a it a {{story.noun5}}, it is going to want a {{story.food1}}.
+			</p>
+		</div>
+	</div>
+</div>	
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/modelTest.js"></script>
+<script type="text/javascript">
+
+
+
+
+
+</script>
+</body>
+</html>

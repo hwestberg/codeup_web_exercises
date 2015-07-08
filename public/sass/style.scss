@@ -1,0 +1,64 @@
+@import 'normalize';
+@import 'grids';
+
+$hilight: blue;
+
+.content-wrapper {
+	font-size: 16px;
+	color: $hilight;
+}
+
+
+@for $i from 1 through 3 {
+	.item-#{$i} {width: 2em * $i;} 
+}
+
+@each $animal in puma, sea-slug, egret, salamander {
+	.#{$animal}-icon {
+		background-image: url('/images/#{$animal}.png');
+	}
+}
+
+// Extending
+.some-class {
+	border: 1px;
+	background-color: #fdd;
+}
+
+.another-class {
+@extend .some-class;
+border-width: 3px;
+}
+
+// Nesting CAUTION- don't go more than three levels deep. Try to stay at 2 levels.
+
+#main{
+
+	background-color: white;
+
+	p {
+		margin: 10px;
+	}
+
+	a {
+		color: green;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+}
+
+@mixin large-text {
+	font: {
+		family: Arial;
+		size: 20px;
+		weight: bold;
+	}
+	color: #ff0000;
+}
+
+.post {
+	@include large-text;
+}

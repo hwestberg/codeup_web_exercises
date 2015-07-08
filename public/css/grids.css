@@ -32,12 +32,24 @@
 	width: 25%;
 }
 
+.column.three-fourths {
+	width: 75%;
+}
+
 .column.one-sixth {
 	width: 16.66666%;
 }
 
+.column.five-sixths {
+	width: 83.3333333333%
+}
+
 .column.one-eighth {
 	width: 12.5%;
+}
+
+.column.seven-eighths {
+	width: 87.5%;
 }
 
 .column.two-thirds {

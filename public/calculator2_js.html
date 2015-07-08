@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/border_box.css">
+	<link rel="stylesheet" type="text/css" href="/css/calculator2.css">
+</head>
+<body>
+	<div class="calculator-container">	
+ 	<div class="row">
+		<input name="operator1" id="main-input" value=""> 
+		</div>
+		<div class="row">
+			<button class="math number">1</button>
+			<button class="math number">2</button>
+			<button class="math number">3</button>
+			<button class="math operator">+</button>
+		</div>
+		
+		<div class="row">
+			<button class="math number">4</button>
+			<button class="math number">5</button>
+			<button class="math number">6</button>
+			<button class="math operator">-</button>
+		</div>
+		<div class="row">
+			<button class="math number">7</button>
+			<button class="math number">8</button>
+			<button class="math number">9</button>
+			<button class="math operator">*</button>
+		</div>
+		
+		<div class="row">
+			<button id="clear">C</button>
+			<button class="math number">0</button>
+			<button id="equals">=</button>
+			<button class="math operator">/</button>
+		</div>
+	</div>	
+<script type="text/javascript">
+"use strict"	
+	var buttonMathValue = document.getElementsByClassName("math");
+
+	var input = document.getElementById("main-input");
+
+	var mathListener = function (event) {
+		input.value = input.value + this.innerHTML;
+	}
+				
+	for(var i = 0; i < buttonMathValue.length; i++) {
+		buttonMathValue[i].addEventListener("click", mathListener, false);
+	}
+	
+	// code for handling clear
+
+	var clear = document.getElementById("clear");
+
+	var clearListener = function(event) {
+		input.value = null;
+	}
+
+	clear.addEventListener("click", clearListener, false);
+
+	var equals = document.getElementById("equals");
+
+	var equalsListener = function(event) {
+		input.value = eval(input.value);
+
+	}
+
+	equals.addEventListener("click", equalsListener, false);
+
+
+</script>
+</body>
+</html>

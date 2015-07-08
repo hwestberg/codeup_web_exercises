@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="apolloModule">
+<head>
+	<title>Angular for Apollo</title>
+<style type="text/css">
+	[ng-cloak] {
+		display: none !important;
+	}
+
+	.box {
+		background-color: blue;
+		width: 30%;
+		height: 30%;
+		padding:5%;
+	}
+</style>
+</head>
+<body>
+<h1>Merp</h1>
+<h2>{{"Merp Merp"|uppercase}}</h2>
+<p>{{5*2*4+6-9}}</p>
+<p>{{44454454.4545454|number:3}}</p>
+<p>{{44454454.4545454|currency}}</p>
+<div class="box" ng-if="1 !== 1">ng if</div>
+<div class="box" ng-if="1 !== 1">ng if</div>
+
+<ol>
+    <li ng-repeat="let in ['A', 'B', 'C', 'D', 'E', 'F']">{{ let }}</li>
+</ol>
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/apolloModule.js"></script>
+</body>
+</html>

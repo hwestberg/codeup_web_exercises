@@ -1,0 +1,22 @@
+.logo {
+	width: 50px;
+	padding: 2px;
+	margin: none;
+}
+
+.slogan {
+
+}
+
+.nav-link a {
+	text-decoration: none;
+	border: 2px solid green;
+	background-color: green;
+	padding: 4%;
+	border-radius: 15%;
+	color: white;
+}
+
+.nav-link a:hover{
+	color: black;
+}

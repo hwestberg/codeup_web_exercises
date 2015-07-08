@@ -1,0 +1,57 @@
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ *
+ * GENERIC
+ *
+ * BODY
+
+ ...
+
+**/
+
+/*-------------------*\
+CALCULATOR
+\*-------------------*/
+
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row {
+	width: 300px;
+}
+
+
+.calculator-container {
+	width: 300px;
+	height: 375px ;
+	margin-left: 100px;
+	margin-top: 200px;
+	border-style: solid;
+	border-width: 2px;
+	background-color: blue;
+
+}
+
+}
+
+input {
+	width: 300px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+button {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 5px;
+}
